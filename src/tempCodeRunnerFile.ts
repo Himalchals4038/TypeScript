@@ -1,12 +1,16 @@
-let newData:any;
-newData = "abc";
-newData = 36.15;
-// newData = true;
-// newData = [48, 37, 95, 20, 64];
-try {
-    console.log(newData.toUpperCase());
-} catch (error) {
-    // console.log(error.message);
-    if (error instanceof Error) console.log(error.message);
-    else console.log(error);
+class Register{
+    #balance: number = 0;
+    deposit(amount: number){
+        this.#balance += amount;
+    }
+    withdraw(amount: number){
+        this.#balance -= amount;
+    }
+    getBalance(){
+        return this.#balance;
+    }
 }
+const register1 = new Register();
+register1.deposit(1000);
+register1.withdraw(500);
+console.log(register1.getBalance());
