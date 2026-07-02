@@ -5,7 +5,7 @@ interface Portal{
     pin: number,
     address: string,
     phone: number,
-    isEligible: boolean
+    isEligible?: boolean
 }
 const portal1:Portal = {
     name: "Tarak Sharma",
